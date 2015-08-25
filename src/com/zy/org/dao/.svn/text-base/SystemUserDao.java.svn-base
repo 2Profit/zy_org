@@ -1,0 +1,14 @@
+package com.zy.org.dao;
+
+import java.util.List;
+
+import com.zy.common.entity.PageModel;
+import com.zy.org.entity.User;
+
+public interface SystemUserDao {
+	
+	PageModel<User> queryForPage(int currentPage,int pageSize);
+	
+	List<User> queryAllocatMemberList(String userName);
+	
+}
