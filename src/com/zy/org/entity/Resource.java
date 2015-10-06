@@ -35,6 +35,8 @@ public class Resource extends BaseEntity{
 	
 	private String url;
 
+	private Integer orderNo;			//排序
+	
 	@Column(length=50)
 	public String getName() {
 		return name;
@@ -70,6 +72,15 @@ public class Resource extends BaseEntity{
 
 	public void setUrl(String url) {
 		this.url = url;
+	}
+
+	@Column(name="order_no")
+	public Integer getOrderNo() {
+		return orderNo;
+	}
+
+	public void setOrderNo(Integer orderNo) {
+		this.orderNo = orderNo;
 	}
 	
 }
