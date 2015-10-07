@@ -12,4 +12,7 @@ public interface UserDao extends SystemUserDao,CommonDao<User,String>{
 	@Query("select u from User u where u.username=?1 ")
 	List<User> findUserByName(String userName);
 	
+	@Query("from User u where u.deleteFlag = 0 and u.status = 1 order by u.realName ")
+	List<User> findUsers();
+	
 }

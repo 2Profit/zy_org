@@ -35,4 +35,8 @@ public class UserService extends CommonService<User,String>{
 		return this.userDao.queryForPage(currentPage, pageSize);
 	}
 
+	public List<User> findUsers() {
+		return userDao.findUsers();
+	}
+	
 }
