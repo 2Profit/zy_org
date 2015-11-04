@@ -50,4 +50,7 @@ public class UserRoleRelService extends CommonService<UserRoleRel,String>{
 		return this.userRoleRelDao.findUserListByRoleCondition(roleId, name);
 	}
 	
+	public void deleteRoleByUserId(String userId) {
+		userRoleRelDao.deleteRoleByUserId(userId);
+	}
 }

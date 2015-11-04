@@ -13,4 +13,6 @@ public interface UserRoleRelCustomDao {
 	 * @return
 	 */
 	List<User> findUserListByRoleCondition(String roleId,String name);
+	
+	void deleteRoleByUserId(String userId);
 }

@@ -25,4 +25,10 @@ public class UserRoleRelDaoImpl extends CustomBaseSqlDaoImpl implements UserRole
 		}
 		return this.queryForList(hql);
 	}
+
+	@Override
+	public void deleteRoleByUserId(String userId) {
+		String sql = "delete from org_user_role_rel where user_id='"+userId+"'";
+		this.executeSql(sql, null);
+	}
 }
